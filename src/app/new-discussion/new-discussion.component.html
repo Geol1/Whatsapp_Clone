@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon  name="chevron-back" slot="start" (click)="fermer()"></ion-icon>
+    <ion-label class="titre"><div>{{nbrContact}} {{ 'add_disc.title' | translate }}</div></ion-label>
+    <ion-icon name="search" slot="end" class="fin_search"></ion-icon>
+      <ion-icon class="fin_menu"  slot="end" name="ellipsis-vertical-outline"   ></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item (click)="newDiscuss()">
+    <ion-avatar slot="start">
+      <img src="../../assets/ic_group.jpg"/>
+      <!-- <ion-icon name="people" class="addMenber"></ion-icon> -->
+    </ion-avatar>
+    <ion-title> {{ 'add_disc.new' | translate }}</ion-title>
+  </ion-item>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="../../assets/ic_newCon.jpg"/>
+    </ion-avatar>
+    <ion-title> {{ 'add_disc.add' | translate }}</ion-title>
+    <ion-icon  name="qr-code"></ion-icon>
+  </ion-item>
+  
+  <app-new-profil-discuss  (click)="addNewDiscuss(disc)" *ngFor="let disc of tabDisc" image={{disc.image}} nom={{disc.nom}} ></app-new-profil-discuss>
+
+</ion-content>

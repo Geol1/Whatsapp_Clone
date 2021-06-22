@@ -1,0 +1,55 @@
+{
+    "Log": {
+        "connexion": "Login",
+        "email": "mail",
+        "pass": "password",
+        "description":"Please complete all case",
+        "button1": "Login",
+        "oublie": "Forgot password ",
+        "newAccount": "New Account"
+    },
+    "reinit": {
+        "connexion": "Re-initialise password",
+        "email": "Mail",
+        "description":"Please Entrer a correct mai;",
+        "button1": "ADD",
+        "button2": "CANCEL"
+    },
+    "nouveau_compte": {
+        "connexion": "ADD A NEW ACCOUNT",
+        "nom": "name",
+        "email": "mail",
+        "pass": "password",
+        "description":"Please complete all case",
+        "button1": "ADD",
+        "button2": "CANCEL"
+    },
+    "profil": {
+        "connexion": "Profile",
+        "nom": "name",
+        "email": "Mail",
+        "description":"Developp By Geol"
+    },
+    "Tab": {
+        "title": "Whatsapp",
+        "nom_param": "SETTING"
+    },
+    "setting": {
+        "theme": "Theme",
+        "langue": "Update Language",
+        "log_out": "LOG OUT",
+        "compte": "Add New Account"
+    },
+    "add_disc": {
+        "title": "Contact",
+        "new": "New Team",
+        "add": "New Contact"
+    },
+    "nouveau_groupe": "New Team",
+    "infos_groupe": {
+        "title": "Information Of Team",
+        "description":"Select picture",
+        "description2":"Menber(s) of Team",
+        "nom": "name"
+    }
+}

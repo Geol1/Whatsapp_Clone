@@ -1,3 +1,4 @@
+import { MaconversationComponent } from './../maconversation/maconversation.component';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,13 +8,17 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
+    TranslateModule.forChild(),
     IonicModule,
     CommonModule,
     FormsModule,
     TabsPageRoutingModule
   ],
-  declarations: [TabsPage]
+  declarations: [TabsPage],
+  
 })
 export class TabsPageModule {}

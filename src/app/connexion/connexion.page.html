@@ -1,0 +1,56 @@
+<ion-header >
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'Log.connexion' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="fontEcran">
+  <form [formGroup]="userForm" (ngSubmit)="logForm()" >
+    <div class="inputForn">
+    <ion-item >
+      <ion-label color="dark" position='floating'>{{ 'Log.email' | translate }}</ion-label>
+      <ion-input type="email" formControlName="email" placeholder="Email"  ></ion-input>
+    </ion-item>
+    
+    <div>
+      <ng-container *ngFor="let validation of validationUserMessage.email">
+          <div class="errors" *ngIf="userForm.get('email').hasError(validation.type) && userForm.get('email').dirty ">
+            {{validation.message}}
+          </div>
+      </ng-container>
+    </div>
+    
+    <ion-item >
+      <ion-label color="dark" position='floating'>{{ 'Log.pass' | translate }}</ion-label>
+      <ion-input  type="password" formControlName="password" placeholder="ex: nom8*#skjoi" ></ion-input>
+    </ion-item>
+    <div>
+      <ng-container *ngFor="let validation of validationUserMessage.password">
+          <div class="errors" *ngIf="userForm.get('password').hasError(validation.type) && userForm.get('password').dirty">
+            {{validation.message}}
+          </div>
+      </ng-container>
+    </div>
+    
+    <ion-item lines="none">
+      <ion-button color="dark" slot="end" fill="clear">{{ 'Log.description' | translate }} :) .</ion-button>
+    </ion-item>
+    
+    <ion-button  type="submit" [disabled]="!userForm.valid" color="dark"  expand="block"  shape="round" color="oldrichColor">{{ 'Log.button1' | translate }}</ion-button>
+  </div>
+    </form>
+    <div class="flex">
+      <label (click)="openModal()">
+        {{ 'Log.oublie' | translate }}<ion-icon slot="end" name="help-outline"></ion-icon>
+      </label>
+      <label (click)="CreerCompte()">
+        <ion-icon slot="start" name="person-add-outline"></ion-icon>
+        {{ 'Log.newAccount' | translate }}
+      </label>
+    </div>
+  </div>
+</ion-content>

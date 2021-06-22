@@ -1,0 +1,13 @@
+
+
+<ion-content [fullscreen]="true">
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success"  (click)="NewDiscuss()">
+      <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <app-profildiscussion (click)="vueConversation(disc)" *ngFor="let disc of tabDisc" image={{disc.image}} nom={{disc.nom}} heure={{disc.heure}} description={{disc.lastMessage}} ></app-profildiscussion>
+ 
+</ion-content>

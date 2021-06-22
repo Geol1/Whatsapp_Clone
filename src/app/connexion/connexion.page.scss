@@ -1,0 +1,34 @@
+.flex {
+    display: flex;
+    color:brown;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-inline: 10px;
+}
+.fontEcran {
+    padding-top: 35%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url("../../assets/bg.png");
+    background-size: cover;
+}
+
+.errors{
+    font-size: small;
+    color: var(--ion-color-light);
+    background: var(--ion-color-danger);
+    padding-inline: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+ion-content ion-item  {
+    --background: transparent;
+}
+ion-content{
+    position: relative;
+}
+ion-header ion-toolbar{
+    --background:var(--ion-color-oldrichColor);
+    color: var(--ion-color-oldrichColorWhite);
+}

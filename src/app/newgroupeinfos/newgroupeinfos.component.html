@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon  name="chevron-back" slot="start" (click)="fermer()"></ion-icon>
+    <ion-label class="titre"><div>{{ 'infos_groupe.title' | translate }}</div></ion-label>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+ 
+  <div class="fontEcran">
+    <h1 class="titre" slot="center">{{ 'infos_groupe.description' | translate }}</h1>
+  <ion-avatar slot="start" >
+    <img src="../../assets/ic_group.jpg">
+  </ion-avatar>
+
+    <input type="file"  (change)="monImage($event)">
+    <h1>{{ 'infos_groupe.nom' | translate }}</h1>
+
+    <form [formGroup]="userForm" >
+      <ion-item >
+        <ion-label color="dark" position='floating'>{{ 'infos_groupe.nom' | translate }}: </ion-label>
+        <ion-input  type="text" formControlName="nom" placeholder="Nom du groupe"  ></ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let validation of validationUserMessage.nom">
+            <div class="errors" *ngIf="userForm.get('nom').hasError(validation.type) && userForm.get('nom').dirty ">
+              {{validation.message}}
+            </div>
+        </ng-container>
+      </div>
+    </form>
+    <br/>
+    <h1 class="titre" slot="center">{{ 'infos_groupe.description2' | translate }}</h1>
+  <ion-item>
+    <div *ngFor="let element of tabElementSelectionner">
+      <ion-avatar slot="start"  >
+        <img src="{{element.image}}">
+       
+      </ion-avatar>
+      <p > {{element.nom}}</p>
+    </div>
+  </ion-item>
+</div>
+    <ion-fab *ngIf="userForm.valid" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="success"  (click)="addNewGroup()">
+        <ion-icon name="people-circle-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+ 
+</ion-content>

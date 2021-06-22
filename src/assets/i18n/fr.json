@@ -1,0 +1,55 @@
+{
+    "Log": {
+        "connexion": "Connexion",
+        "email": "Email",
+        "pass": "Mot de passe",
+        "description":"Merci de bien vouloir remplir tous les champs",
+        "button1": "Connexion",
+        "oublie": "Mot de passe oublie",
+        "newAccount": "Nouveau compte"
+    },
+    "reinit": {
+        "connexion": "Re-initialise Mot de passe",
+        "email": "Email",
+        "description":"Merci d'entrer un mail Correct",
+        "button1": "AJOUTER",
+        "button2": "ANNULER"
+    },
+    "nouveau_compte": {
+        "connexion": "Creer de compte",
+        "nom": "nom",
+        "email": "Email",
+        "pass": "password",
+        "description":"Merci de bien vouloir remplir tous les champs",
+        "button1": "AJOUTER",
+        "button2": "ANNULER"
+    },
+    "profil": {
+        "connexion": "Profil",
+        "nom": "Nom",
+        "email": "Email",
+        "description":"Developper par Geol"
+    },
+    "Tab": {
+        "title": "Whatsapp",
+        "nom_param": "PARAMETRE"
+    },
+    "setting": {
+        "theme": "Theme",
+        "langue": "change de langue",
+        "log_out": "Deconnexion",
+        "compte": "Creer un nouveau groupe"
+    },
+    "add_disc": {
+        "title": "Contact",
+        "new": "Nouveau Groupe",
+        "add": "Nouveau Contact"
+    },
+    "nouveau_groupe": "Nouveau Groupe",
+    "infos_groupe": {
+        "title": "Infos Du Groupe",
+        "description":"Selectionner une photo",
+        "description2":"Menbre(s) du groupe",
+        "nom": "Nom"
+    }
+}

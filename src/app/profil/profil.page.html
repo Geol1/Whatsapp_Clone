@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'profil.connexion' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="fontEcran">
+  <form [formGroup]="profilForm" >
+    <ion-avatar slot="end">
+      <img src="{{ImageProfile}}">
+    </ion-avatar>
+    <ion-item lines="none">
+      <div>
+        <ion-icon name="person"></ion-icon>
+        <div>
+          <ion-label color="dark">{{ 'profil.nom' | translate }}</ion-label>
+          <ion-label  color="dark" >{{nom}}</ion-label>
+        </div >
+        <!-- <ion-icon name="pencil-sharp"></ion-icon> -->
+      </div>
+    </ion-item>
+    <ion-item lines="none">
+      <div>
+        <ion-icon name="mail-sharp"></ion-icon>
+        <div>
+          <ion-label color="dark">{{ 'profil.email' | translate }}</ion-label>
+          <ion-label  color="dark" > {{email}}</ion-label>
+        </div >
+        <ion-icon name="pencil-sharp"></ion-icon>
+      </div>
+    </ion-item>
+    
+    <ion-item lines="none">
+      <ion-button color="dark" slot="start" fill="clear">{{ 'profil.description' | translate }}  :) .</ion-button>
+    </ion-item>
+  </form>
+</div>
+</ion-content>

@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'nouveau_compte.connexion' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="fontEcran">
+    <form [formGroup]="userForm" (ngSubmit)="logForm()" >
+      
+      <ion-avatar slot="start" >
+        <ion-img src="../../assets/ic_newCon.jpg"></ion-img>
+      </ion-avatar>
+
+      <ion-item lines="none">
+        <input type="file" formControlName="image"  (change)="monImage($event)">
+      </ion-item>
+
+      <ion-item >
+        <ion-label color="dark" position='floating'>{{ 'nouveau_compte.nom' | translate }}</ion-label>
+        <ion-input formControlName="nom" type="text" placeholder="Entrer votre nom" ></ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let validation of validationUserMessage.nom">
+            <div class="errors" *ngIf="userForm.get('nom').hasError(validation.type) && userForm.get('nom').dirty ">
+              {{validation.message}}
+            </div>
+        </ng-container>
+      </div>
+     
+      
+      <ion-item >
+        <ion-label color="dark" position='floating'>{{ 'nouveau_compte.email' | translate }}</ion-label>
+        <ion-input type="email" formControlName="email" placeholder="Email"  ></ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let validation of validationUserMessage.email">
+            <div class="errors" *ngIf="userForm.get('email').hasError(validation.type) && userForm.get('email').dirty ">
+              {{validation.message}}
+            </div>
+        </ng-container>
+      </div>
+      
+      <ion-item >
+        <ion-label color="dark" position='floating'>{{ 'nouveau_compte.pass' | translate }}</ion-label>
+        <ion-input  type="password" formControlName="password" placeholder="ex: nom8*#skjoi" ></ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let validation of validationUserMessage.password">
+            <div class="errors" *ngIf="userForm.get('password').hasError(validation.type) && userForm.get('password').dirty">
+              {{validation.message}}
+            </div>
+        </ng-container>
+      </div>
+      
+      <ion-item lines="none">
+        <ion-button color="dark" slot="end" fill="clear">{{ 'nouveau_compte.description' | translate }} :) .</ion-button>
+      </ion-item>
+      
+      <ion-button color="oldrichColor" type="submit" *ngIf="imageValide" [disabled]="!userForm.valid" color="dark"  expand="block"  shape="round" >{{ 'nouveau_compte.button1' | translate }}</ion-button>
+      <br>
+      <ion-button color="oldrichColor" expand="block" shape="round" (click)="Annuler()" >{{ 'nouveau_compte.button2' | translate }}</ion-button>
+    </form>
+  </div>
+</ion-content>

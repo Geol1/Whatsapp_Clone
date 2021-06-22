@@ -1,0 +1,23 @@
+<ion-content>
+
+  <div id="header">
+    <ion-item >
+      <ion-icon  name="chevron-back" slot="start" (click)="fermer()"></ion-icon>
+    </ion-item>
+    
+  <img src="../../assets/whatsapp--v2.png" id="logo" alt="">
+  <h1>Free Color</h1>
+  </div>
+ 
+  <ion-card mode="ios">
+  <div class="container">
+    <div class="inner" *ngFor="let colorTheme of colorThemes" (click)="setTheme(colorTheme.color)">
+      <div class="color" [style.background]="colorTheme.color">
+      </div>
+        <br>{{colorTheme.name}}
+    </div>
+  </div>
+ 
+  </ion-card>
+ </ion-content>
+

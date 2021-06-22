@@ -10,14 +10,30 @@
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #3171e0;
   --ion-color-primary-tint: #4c8dff;
-
+  
+  /**oldrichColor**/
+  --ion-color-oldrichColor: #00643C;
+  --ion-color-oldrichColor-rgb: 5, 123, 72;
+  --ion-color-oldrichColor-contrast: #ffffff;
+  --ion-color-oldrichColor-contrast-rgb: 255,255,255;
+  --ion-color-oldrichColor-shade: #13e240;
+  --ion-color-oldrichColor-tint: #349649;
+   
+  /**oldrichColor**/
+  --ion-color-oldrichColorWhite: #FFF;
+  --ion-color-oldrichColorWhite-rgb: 5, 123, 72;
+  --ion-color-oldrichColorWhite-contrast: #d1c9c9;
+  --ion-color-oldrichColorWhite-contrast-rgb: 255,255,255;
+  --ion-color-oldrichColorWhite-shade: #979c98;
+  --ion-color-oldrichColorWhite-tint: #FFF;
+  
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
   --ion-color-secondary-rgb: 61, 194, 255;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
   --ion-color-secondary-shade: #36abe0;
-  --ion-color-secondary-tint: #50c8ff;
+  --ion-color-secondary-tint: #a2f5d2;
 
   /** tertiary **/
   --ion-color-tertiary: #5260ff;
@@ -68,13 +84,29 @@
   --ion-color-medium-tint: #9d9fa6;
 
   /** light **/
-  --ion-color-light: #f4f5f8;
+  --ion-color-light: #eaecf3;
   --ion-color-light-rgb: 244, 245, 248;
   --ion-color-light-contrast: #000000;
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 }
+.ion-color-oldrichColor {
+  --ion-color-base: var(--ion-color-oldrichColor);
+  --ion-color-base-rgb: var(--ion-color-oldrichColor-rgb);
+  --ion-color-contrast: var(--ion-color-oldrichColor-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-oldrichColor-contrast-rgb);
+  --ion-color-shade: var(--ion-color-oldrichColor-shade);
+  --ion-color-tint: var(--ion-color-oldrichColor-tint);
+ }
+.ion-color-oldrichColorWhite {
+  --ion-color-base: var(--ion-color-oldrichColorWhite);
+  --ion-color-base-rgb: var( --ion-color-oldrichColorWhite-rgb);
+  --ion-color-contrast: var( --ion-color-oldrichColorWhite-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-oldrichColorWhite-contrast-rgb);
+  --ion-color-shade: var(--ion-color-oldrichColorWhite-shade);
+  --ion-color-tint: var(--ion-color-oldrichColorWhite-tint);
+ }
 
 @media (prefers-color-scheme: dark) {
   /*

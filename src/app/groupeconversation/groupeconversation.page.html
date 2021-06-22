@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon  name="arrow-back" slot="start" (click)="fermer()"></ion-icon>
+    <ion-title>{{Profil.nom}}<br><div class="status">{{Menbres}}</div></ion-title>
+    <ion-avatar slot="end">
+      <img src={{Profil.image}}>
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    
+    <div class="bg"></div>
+    <ion-item lines="none" *ngFor="let sms of messages">
+      
+        <ion-badge class="ion-text-wrap" *ngIf="sms.uidSend===userId" color="warning"  slot="end">
+          <!-- {{sms.nomSend}} -->
+          {{sms.contentMessage}}  
+          <ion-note color="medium">{{sms.heure}} <ion-icon name="checkmark"></ion-icon></ion-note>
+          <ion-img *ngIf="sms.imageValide" src="{{sms.image}}"></ion-img>
+          </ion-badge>
+          
+        <ion-badge class="ion-text-wrap" *ngIf="sms.uidSend!==userId" color="light" slot="start">
+          <!-- <p>{{sms.nomSend}}</p> -->
+          {{sms.contentMessage}} 
+          <ion-note color="medium">{{sms.heure}}</ion-note>
+          <ion-img *ngIf="sms.imageValide" src="{{sms.image}}"></ion-img>
+          
+        </ion-badge>
+          
+    </ion-item>
+    
+</ion-content> 
+
+<ion-footer >
+  <ion-toolbar class="textfield">
+    <ion-item color="light" lines="none">
+      <!-- <ion-icon name="happy-outline" slot="start"></ion-icon> -->
+        <ion-icon (click)="showEmojiPicker = !showEmojiPicker" name="happy-outline" style="zoom:1.4;"></ion-icon>
+     
+      <form [formGroup]="messageForm" >
+          <ion-input type="text" formControlName="message" placeholder="Votre message" ></ion-input>
+      </form>
+      
+      <ion-icon name="attach-sharp" slot="end" ></ion-icon>
+      <ion-icon name="camera" slot="end" class="finInput" (click)="addPhotoToGallery()" ></ion-icon>
+    </ion-item>
+
+    <div slot="end" >
+      <ion-item color="success">
+        <ion-icon name="send" color="light" (click)="sendMessage()"></ion-icon>
+      </ion-item>
+    </div>
+    <div class="emojiContainer" [style.height]="showEmojiPicker?'300px':'0px'"> 
+      <emoji-picker (onEmojiSelect)="addEmoji($event)"></emoji-picker>
+    </div>
+  </ion-toolbar>
+</ion-footer>
